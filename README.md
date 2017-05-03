@@ -8,3 +8,6 @@ This is a repository for SQL scripts pertaining to the creation, update, and ret
 USING --YOUR DATABASE
 SELECT * FROM --YOUR TABLE
 ```
+
+## Database Structure
+![DB Structure](/DatabaseDiagram.png)
