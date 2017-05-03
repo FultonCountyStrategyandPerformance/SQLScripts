@@ -9,7 +9,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[PerformanceManagement_Departments](
-	[DepartmentID] [int] IDENTITY(1,1) PRIMARY KEY,
+	[DepartmentID] [int] NOT NULL PRIMARY KEY,
 	[Department] [nvarchar](255) NOT NULL
 )
 

@@ -10,8 +10,10 @@ GO
 
 CREATE TABLE [dbo].[users](
 	[ID] [int] IDENTITY(1,1) PRIMARY KEY,
-	[username] [nvarchar](255) NOT NULL,
-	[departmentID] [int] FOREIGN KEY REFERENCES PerformanceManagement_Departments(DepartmentID)
+	[Username] [nvarchar](255) NOT NULL,
+	[Password] [nvarchar](244) NOT NULL,
+	[DepartmentHead] int NOT NULL,
+	[DepartmentID] [int] FOREIGN KEY REFERENCES PerformanceManagement_Departments(DepartmentID)
 )
 
 GO
