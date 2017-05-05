@@ -26,5 +26,16 @@ CREATE TABLE [dbo].[PerformanceManagement_Initiatives](
 
 GO
 
-SET ANSI_PADDING OFF
+CREATE TABLE [dbo].[PerformanceManagement_Initiatives_staging](
+	[InitiativeID] [int] IDENTITY(1,1) PRIMARY KEY,
+	[Year] [int] NULL,
+	[Quarter] [int] NULL,
+	[Department] [varchar](50) NULL,
+	[Initiative] [text] NULL,
+	[Budget] [int] NULL,
+	[ImpactStatement] [text] NULL,
+	[Progress] [text] NULL,
+	[Editor] [text] NULL,
+	[LastEdit] [datetime] NULL
+)
 GO

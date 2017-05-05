@@ -13,9 +13,8 @@ GO
 
 CREATE TABLE [dbo].[PerformanceManagement_ProgramValues](
 	[MeasureID] [int] FOREIGN KEY REFERENCES PerformanceManagement_ProgramKPIs(MeasureID),
-	[Year] [varchar](50) NULL,
-	[Quarter] [varchar](50) NULL,
-	[ValueType] [varchar](50) NULL,
+	[Year] [varchar](50) NOT NULL,
+	[Quarter] [varchar](50) NOT NULL,
 	[LastEdit] [varchar](50) NULL,
 	[Editor] [varchar](50) NULL,
 	[Value] [varchar](50) NULL,
@@ -24,5 +23,14 @@ CREATE TABLE [dbo].[PerformanceManagement_ProgramValues](
 
 GO
 
-SET ANSI_PADDING OFF
+CREATE TABLE [dbo].[PerformanceManagement_ProgramValues_staging](
+	[MeasureID] [int] FOREIGN KEY REFERENCES PerformanceManagement_ProgramKPIs(MeasureID),
+	[Year] [varchar](50) NOT NULL,
+	[Quarter] [varchar](50) NOT NULL,
+	[LastEdit] [varchar](50) NULL,
+	[Editor] [varchar](50) NULL,
+	[Value] [varchar](50) NULL,
+	CONSTRAINT [StagingValueID] PRIMARY KEY (MeasureID, Year, Quarter)
+)
+
 GO
